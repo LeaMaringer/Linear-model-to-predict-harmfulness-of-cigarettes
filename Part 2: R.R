@@ -33,7 +33,7 @@ student_residuals <- rstudent(model)
 
 # Critical threshold (Student quantile)
 alpha <- 0.1
-student_threshold <- qt(1-alpha/2, 24 - 3 - 1)
+student_threshold <- qt(1-alpha/2, 24 - 3 - 2)
 print(student_threshold)
 rstudent_outliers <- (student_residuals < -student_threshold| student_residuals > + student_threshold)
 student_outliers <- cig[rstudent_outliers,]
